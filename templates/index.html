@@ -1,0 +1,254 @@
+{% extends 'base.html' %}
+
+{%block conteudo%}
+
+<style>
+    .carousel-indicators img{
+        width: 70px;
+        display: block;
+    }
+    .carousel-indicators button{
+        width: max-content!important;
+    }
+    .carousel-indicators{
+        position: unset;
+    }
+
+    .carousel-caption {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+           
+            transform: translate(-50%, -50%);
+            text-align: center;
+            
+         
+        }
+
+ 
+
+   
+</style>
+
+<div class="container-video">
+
+    <video autoplay loop muted plays-inline class="background-clip">
+        <source src="/static/imagens/853919-hd_1920_1080_25fps.mp4" type="video/mp4">
+    </video>
+
+    <div class="content">
+        <h1>Estude na &lt;/CodeClass&gt;</h1>
+        <p>Faca parte da maior plataforma de cursos de tecnologia do pais</p>
+        <a href="#quemsomos">Saiba Mais</a>
+    </div>
+</div>
+
+
+<!-- CARDS -->
+
+<div class="quemsomos" id="quemsomos">
+<h2>Quem somos?</h2>
+<p>Na CodeClass, nossa missão é capacitar indivíduos de todas as origens a dominar as habilidades essenciais de programação necessárias para prosperar no mundo digital em constante evolução. Fundada por apaixonados por tecnologia, nossa plataforma oferece uma experiência de aprendizado envolvente, acessível e altamente eficaz.</p> 
+
+<div class="container-fluid">
+    <div class="container">
+    <div class="carousel slide"  id="carouselDemo" data-bs-wrap="true"  data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active" data-bs-interval="2000" onclick="window.location.href = '/html';" style="cursor: pointer;">
+                <img src="/static/imagens/htmlcss.png" class="w-100">
+                <div class="carousel-caption">
+                    
+                    
+                
+
+                </div>
+            </div>
+
+            <div class="carousel-item "  data-bs-interval="2000" onclick="window.location.href = '/js';" style="cursor: pointer;">
+                <img src="/static/imagens/js.jpg" class="w-100">
+                <div class="carousel-caption">
+                
+                    
+                </div>
+            </div>
+
+            <div class="carousel-item " data-bs-interval="2000" onclick="window.location.href = '/python';" style="cursor: pointer;">
+                <img src="/static/imagens/python.png" class="w-100">
+                <div class="carousel-caption">
+                
+                    
+                </div>
+            </div>
+
+            <div class="carousel-item " data-bs-interval="2000" onclick="window.location.href = '/nodejs';" style="cursor: pointer;">
+                <img src="/static/imagens/nodejs.png" class="w-100">
+                <div class="carousel-caption">
+                
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" 
+        type="button"
+        data-bs-target="#carouselDemo" 
+        data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselDemo"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        </button>
+
+        <div class="carousel-indicators">
+            <button type="button" class="active"
+                data-bs-target="#carouselDemo"
+                data-bs-slide-to="0">
+                <img src="/static/imagens/html.jpg" />
+            </button>
+
+            <button type="button" 
+            data-bs-target="#carouselDemo"
+            data-bs-slide-to="1">
+                <img src="/static/imagens/js.jpg" />
+            </button>
+
+            <button type="button"
+            data-bs-target="#carouselDemo"
+            data-bs-slide-to="2">
+                <img src="/static/imagens/python.png" />
+            </button>
+
+            <button type="button"
+            data-bs-target="#carouselDemo"
+            data-bs-slide-to="3">
+                <img src="/static/imagens/nodejs.png" />
+            </button>
+        </div>
+
+    </div>
+    </div>
+</div>
+
+
+<p>O que nos diferencia é o compromisso com a qualidade. Nossos cursos são cuidadosamente elaborados por especialistas da indústria, garantindo que você aprenda as tecnologias mais relevantes e as melhores práticas atuais. Desde iniciantes até profissionais experientes, temos algo para todos, independentemente do nível de habilidade ou do objetivo de carreira.
+</p>
+
+<p>Na CodeClass, não se trata apenas de aprender código, mas de cultivar uma comunidade vibrante de aprendizes e mentores. Valorizamos a colaboração, a criatividade e a inovação, e nosso objetivo é criar um ambiente onde você possa crescer pessoal e profissionalmente, cercado por colegas apaixonados e orientadores experientes.
+
+</p>
+<p>Junte-se a nós na jornada para desbloquear todo o potencial da programação. Seja você um novato curioso ou um veterano experiente, a CodeClass é o seu destino para se tornar um mestre em desenvolvimento de software. Vamos codificar o futuro juntos!
+
+</p>
+</div>
+
+
+<div class="wave-effect">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" ><path fill="#222" fill-opacity="1" d="M0,288L80,266.7C160,245,320,203,480,208C640,213,800,267,960,272C1120,277,1280,235,1360,213.3L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+
+    
+  
+</div>
+
+
+<div class="cards-section">
+    <h2 id="cursosh2">Cursos em nossa plataforma</h2>
+    <div class="ag-format-container">
+        <div class="ag-courses_box">
+          <div class="ag-courses_item">
+            <a href="{{url_for('html')}}" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                HTML + CSS
+              </div>
+      
+              <div class="ag-courses-item_date-box">
+                
+              </div>
+            </a>
+          </div>
+      
+          <div class="ag-courses_item">
+            <a href="{{url_for('js')}}" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                Javascript
+              </div>
+      
+            </a>
+          </div>
+      
+          <div class="ag-courses_item">
+            <a href="/bootstrap" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                Bootstrap
+              </div>
+      
+          
+            </a>
+          </div>
+      
+          <div class="ag-courses_item">
+            <a href="/python" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                Python
+              </div>
+      
+             
+            </a>
+          </div>
+      
+          <div class="ag-courses_item">
+            <a href="/mysql" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                MySQL
+              </div>
+      
+             
+            </a>
+          </div>
+      
+          <div class="ag-courses_item">
+            <a href="nodejs" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                NodeJS
+              </div>
+            </a>
+          </div>
+      
+        
+      
+          
+      
+        </div>
+      </div>
+
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="	#222" fill-opacity="1" d="M0,192L120,186.7C240,181,480,171,720,181.3C960,192,1200,224,1320,240L1440,256L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
+
+<div class="quiz-content" >
+    <h2 id="quiz-h2">Teste seus conhecimentos!</h2>
+   
+   
+    <a href="{{ url_for('quiz') }}" class="btn-flip" data-back="Acessar" data-front="Questionarios"></a>
+</div>
+
+{%endblock conteudo%}

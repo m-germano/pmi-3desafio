@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{%block css%}<link rel="stylesheet" href="{{ url_for('static', filename='css/pages.css') }}">{%endblock css%}
+{%block conteudo%}
+<div class="intro-div python">
+    <div class="intro-title">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="96" height="96" fill="rgba(255,255,255,1)"><path d="M16 2L21 7V21.0082C21 21.556 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918C3 2.44405 3.44495 2 3.9934 2H16ZM17.6569 12L14.1213 8.46447L12.7071 9.87868L14.8284 12L12.7071 14.1213L14.1213 15.5355L17.6569 12ZM6.34315 12L9.87868 15.5355L11.2929 14.1213L9.17157 12L11.2929 9.87868L9.87868 8.46447L6.34315 12Z"></path></svg>
+    <h1>Python</h1>
+    </div>
+</div>
+<main>
+    <div class="container-fluid flex">
+        <div class="flex_content flex2">
+            <h2>Básico</h2>
+            <h4>Gratuito</h4>
+            <span>3,000 visitantes por mes</span>
+            <ul>
+                <li>Acesso a videoaulas</li>
+                <li>Projetos limitados</li>
+                <li>Sem acesso a monitoria</li>
+            </ul>
+            <button class="python">
+                Iniciar agora
+            </button>
+        </div>
+        <div class="flex_content">
+            <h2>Pro</h2>
+            <h4>R$49,90 / mes</h4>
+            <span>10,000 visitantes por mes</span>
+            <ul>
+                <li>Projetos ilimitados</li>
+                <li>Revisão de código</li>
+                <li>Monitoria</li>
+            </ul>
+            <button class="python">
+                Comprar
+            </button>
+        </div>
+    </div>
+
+    
+</main>
+
+<section class="course-content">
+    <h2>Videos Gratuitos</h2>
+
+    <details>
+        <summary>Introducao ao Curso</summary>
+        <iframe src="/static/imagens/853919-hd_1920_1080_25fps.mp4" title="W3Schools Free Online Web Tutorials" ></iframe>
+    </details>    
+    <details>
+        <summary>Programas necessários</summary>
+        <iframe src="/static/imagens/853919-hd_1920_1080_25fps.mp4" title="W3Schools Free Online Web Tutorials" ></iframe>
+    </details>    
+    <details>
+        <summary>O que é o Python</summary>
+        <iframe src="/static/imagens/853919-hd_1920_1080_25fps.mp4" title="W3Schools Free Online Web Tutorials" ></iframe>
+    </details>    
+    <details>
+        <summary>Aplicações do Python</summary>
+        <iframe src="/static/imagens/853919-hd_1920_1080_25fps.mp4" title="W3Schools Free Online Web Tutorials" ></iframe>
+    </details>        
+</section>
+
+{%endblock conteudo%}

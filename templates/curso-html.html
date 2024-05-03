@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{%block css%}<link rel="stylesheet" href="{{ url_for('static', filename='css/pages.css') }}">{%endblock css%}
+{%block conteudo%}
+
+<div class="intro-div html">
+    <div class="intro-title">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="96" height="96" fill="rgba(255,255,255,1)"><path d="M12 18.1778L16.6192 16.9222L17.2434 10.1444H9.02648L8.82219 7.88889H17.4477L17.6747 5.67778H6.32535L6.96091 12.3556H14.7806L14.5195 15.2222L12 15.8889L9.48045 15.2222L9.32156 13.3778H7.0517L7.38083 16.9222L12 18.1778ZM3 2H21L19.377 20L12 22L4.62295 20L3 2Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="96" height="96" fill="rgba(255,255,255,1)"><path d="M5.00006 3L4.35006 6.34H17.9401L17.5001 8.5H3.92006L3.26006 11.83H16.8501L16.0901 15.64L10.6101 17.45L5.86006 15.64L6.19006 14H2.85006L2.06006 18L9.91006 21L18.9601 18L20.1601 11.97L20.4001 10.76L21.9401 3H5.00006Z"></path></svg>
+    <h1>HTML + CSS </h1>
+    </div>
+</div>
+<main>
+    <div class="container-fluid flex">
+        <div class="flex_content flex2">
+            <h2>Básico</h2>
+            <h4>Gratuito</h4>
+            <span>3,000 visitantes por mes</span>
+            <ul>
+                <li>Acesso a videoaulas</li>
+                <li>Projetos limitados</li>
+                <li>Sem acesso a monitoria</li>
+            </ul>
+            <button class="html">
+                Iniciar agora
+            </button>
+        </div>
+        <div class="flex_content">
+            <h2>Pro</h2>
+            <h4>R$49,90 / mes</h4>
+            <span>10,000 visitantes por mes</span>
+            <ul>
+                <li>Projetos ilimitados</li>
+                <li>Revisão de código</li>
+                <li>Monitoria</li>
+            </ul>
+            <button class="html">
+                Comprar
+            </button>
+        </div>
+    </div>
+
+    
+</main>
+
+<section class="course-content">
+    <h2>Videos Gratuitos</h2>
+
+    <details>
+        <summary>Introducao ao Curso</summary>
+        <iframe src="/static/imagens/853919-hd_1920_1080_25fps.mp4" title="W3Schools Free Online Web Tutorials" ></iframe>
+    </details>    
+    <details>
+        <summary>Programas necessários</summary>
+        <iframe src="/static/imagens/853919-hd_1920_1080_25fps.mp4" title="W3Schools Free Online Web Tutorials" ></iframe>
+    </details>    
+    <details>
+        <summary>O que é HTML e CSS</summary>
+        <iframe src="/static/imagens/853919-hd_1920_1080_25fps.mp4" title="W3Schools Free Online Web Tutorials" ></iframe>
+    </details>    
+    <details>
+        <summary>As funções de um frontend</summary>
+        <iframe src="/static/imagens/853919-hd_1920_1080_25fps.mp4" title="W3Schools Free Online Web Tutorials" ></iframe>
+    </details>        
+</section>
+{%endblock conteudo%}
