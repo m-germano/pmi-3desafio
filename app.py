@@ -20,7 +20,7 @@ def inscrever():
         cur.execute("INSERT INTO inscricoes (email) VALUES (%s)", (email,))
         mysql.connection.commit()
         cur.close()
-        return redirect('/')
+        return redirect('/#inscrito')
     else:
         return redirect('/')
 

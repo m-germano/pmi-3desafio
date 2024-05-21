@@ -8,3 +8,10 @@ function showSidebar(){
   }
 
 
+
+  if (window.location.hash === '#inscrito') {
+    var myModal = new bootstrap.Modal(document.getElementById('inscricaoModal'), {
+        keyboard: false
+    });
+    myModal.show();
+}
