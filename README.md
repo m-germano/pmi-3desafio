@@ -55,6 +55,8 @@ de forma eficaz. Seja criativo(a)!
 
 Para Linux
 
+Va ate a pasta do projeto
+
 ```
 sudo apt install python3-pip
 sudo apt install python3-venv
@@ -63,4 +65,9 @@ source venv/bin/activate
 pip install flask_mysqldb
 sudo apt install python3-dev default-libmysqlclient-dev build-essential pkg-config
 
+
 ```
+
+Rodando Via AWS
+
+flask run --host=0.0.0.0
