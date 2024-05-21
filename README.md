@@ -49,4 +49,18 @@ de forma eficaz. Seja criativo(a)!
 1- Set-ExecutionPolicy -ExecutionPolicy AllSigned
 
 2- Pressione 'S' e 'Enter' para confirmar.
+
+
+```
+
+Para Linux
+
+```
+sudo apt install python3-pip
+sudo apt install python3-venv
+python3 -m venv venv
+source venv/bin/activate
+pip install flask_mysqldb
+sudo apt install python3-dev default-libmysqlclient-dev build-essential pkg-config
+
 ```
