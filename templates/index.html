@@ -267,4 +267,13 @@
     <a href="{{ url_for('quiz') }}" class="btn-flip" data-back="Acessar" data-front="Questionarios"></a>
 </div>
 
+<div class="inscricao">
+
+<h2>Inscreva-se para receber novidades:</h2>
+
+<form action="/inscrever" method="post">
+    <input type="email" name="email" placeholder="Seu e-mail">
+    <input type="submit" value="Inscrever">
+</form>
+</div>
 {%endblock conteudo%}

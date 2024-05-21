@@ -1,11 +1,28 @@
-from flask import Flask, render_template, url_for, redirect
+from flask import Flask, render_template, request, redirect
+from flask_mysqldb import MySQL
+
 app = Flask(__name__)
-
-
+app.config['MYSQL_HOST'] = 'localhost'  # ou o endereço do seu banco de dados MySQL
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'fatec@2024'
+app.config['MYSQL_DB'] = 'database_projeto4'
+mysql = MySQL(app)
 
 @app.route('/')
 def home():
     return render_template('index.html')
+
+@app.route('/inscrever', methods=['POST'])
+def inscrever():
+    if request.method == 'POST':
+        email = request.form['email']
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO inscricoes (email) VALUES (%s)", (email,))
+        mysql.connection.commit()
+        cur.close()
+        return redirect('/')
+    else:
+        return redirect('/')
 
 @app.route('/html')
 def html():
@@ -27,22 +44,17 @@ def nodejs():
 def bootstrap():
     return render_template('curso-bootstrap.html')
 
-@app.route('/mysql')
-def mysql():
+@app.route('/curso-mysql')  # Renomeie a função da rota para evitar conflito de nomes
+def curso_mysql():
     return render_template('curso-mysql.html')
 
 @app.route('/github')
 def github():
     return redirect('https://www.github.com/m-germano/projetoAPI-horus')
 
-
 @app.route('/quiz')
 def quiz():
     return render_template('quiz.html')
-   
-
-    
-
 
 if __name__ == "__main__":
     app.run(debug=True)
