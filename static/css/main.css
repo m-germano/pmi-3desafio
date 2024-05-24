@@ -61,6 +61,15 @@
 
     
   }
+
+
+main {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
+}
   nav li{
     height: 50px;
   }

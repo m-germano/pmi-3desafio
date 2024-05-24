@@ -1,10 +1,10 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for
 from flask_mysqldb import MySQL
 
 app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'localhost'  # ou o endereço do seu banco de dados MySQL
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'fatec@2024'
+app.config['MYSQL_PASSWORD'] = 'marcal2012'
 app.config['MYSQL_DB'] = 'database_projeto4'
 mysql = MySQL(app)
 
@@ -44,7 +44,7 @@ def nodejs():
 def bootstrap():
     return render_template('curso-bootstrap.html')
 
-@app.route('/curso-mysql')  # Renomeie a função da rota para evitar conflito de nomes
+@app.route('/curso-mysql')
 def curso_mysql():
     return render_template('curso-mysql.html')
 
@@ -55,6 +55,22 @@ def github():
 @app.route('/quiz')
 def quiz():
     return render_template('quiz.html')
+
+@app.route('/inscricoes')
+def inscricoes():
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT id, email FROM inscricoes")
+    data = cur.fetchall()
+    cur.close()
+    return render_template('inscricoes.html', inscricoes=data)
+
+@app.route('/delete/<int:id>', methods=['POST'])
+def delete(id):
+    cur = mysql.connection.cursor()
+    cur.execute("DELETE FROM inscricoes WHERE id = %s", (id,))
+    mysql.connection.commit()
+    cur.close()
+    return redirect(url_for('inscricoes'))
 
 if __name__ == "__main__":
     app.run(debug=True)
