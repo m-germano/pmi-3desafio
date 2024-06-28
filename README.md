@@ -43,7 +43,7 @@ de forma eficaz. Seja criativo(a)!
 
 • Copie o link do site e cole-o em seu navegador.
 
-• Existem dois possíveis erros que podem ocorrer durante essas etapas. O primeiro é a falta de permissão de execução em seu computador. Para corrigir isso, abra o PowerShell do seu computador como administrador e digite os seguintes comandos:
+• Existem um possível erro que pode ocorrer durante essas etapas.Seria a falta de permissão de execução em seu computador. Para corrigir isso, abra o PowerShell do seu computador como administrador e digite os seguintes comandos:
 
 ```
 1- Set-ExecutionPolicy -ExecutionPolicy AllSigned
@@ -58,16 +58,12 @@ Para Linux
 Va ate a pasta do projeto
 
 ```
-sudo apt install python3-pip
-sudo apt install python3-venv
+
 python3 -m venv venv
 source venv/bin/activate
-pip install flask_mysqldb
-sudo apt install python3-dev default-libmysqlclient-dev build-essential pkg-config
+pip install -r requirements.txt
+flask run --host=0.0.0.0 
 
 
 ```
 
-Rodando Via AWS
-
-flask run --host=0.0.0.0
